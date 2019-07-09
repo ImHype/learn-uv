@@ -7,6 +7,9 @@ all: basic.o
 	echo run $@
 	./$@;
 
+demo:
+	$(CC) ./src/basic/main.c -luv -o a.out;
+
 clean:
 	@rm -rf *.o
 
