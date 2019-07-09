@@ -3,10 +3,10 @@
 all: basic.o
 
 %.o:./src/%/*.c
-	@$(CC) ./$^ -luv -o $@;
-	@./$@;
-	@$(MAKE) clean;
+	$(CC) ./$^ -luv -o $@;
+	echo run $@
+	./$@;
 
 clean:
-	rm -rf *.o
+	@rm -rf *.o
 
