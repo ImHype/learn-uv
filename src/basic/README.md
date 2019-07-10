@@ -38,15 +38,15 @@ $ gcc basic.o
 ```
 
 ```console
-> Undefined symbols for architecture x86_64:
->  "_uv_loop_close", referenced from:
->      _main in basic.o
->  "_uv_loop_init", referenced from:
->      _main in basic.o
->  "_uv_run", referenced from:
->      _main in basic.o
->ld: symbol(s) not found for architecture x86_64
->clang: error: linker command failed with exit code 1 (use -v to see invocation)
+Undefined symbols for architecture x86_64:
+  "_uv_loop_close", referenced from:
+      _main in basic.o
+  "_uv_loop_init", referenced from:
+      _main in basic.o
+  "_uv_run", referenced from:
+      _main in basic.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
 ```
 
 We need also include our dependencies
