@@ -2,14 +2,11 @@
 
 all: basic.o idle.o
 
-%.o:./src/%/*.c
-	$(CC) ./$^ -luv -o $@;
-	echo run $@
-	./$@;
-
-demo:
-	$(CC) ./src/basic/main.c -luv -o a.out;
+%.o:./lib/libuv/docs/code/%/main.c
+	@$(CC) ./$^  -luv -o $@;
+	@echo run $@
+	@./$@;
+	@$(MAKE) clean;
 
 clean:
 	@rm -rf *.o
-
